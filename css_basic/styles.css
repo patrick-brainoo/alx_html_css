@@ -27,5 +27,16 @@ aside {
   overflow-y: auto;
   background-color: #e0e0e0;
 }
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  
+  article, aside {
+    flex: auto; /* Both take full width */
+    width: 100%;
+  }
+}
 
 
