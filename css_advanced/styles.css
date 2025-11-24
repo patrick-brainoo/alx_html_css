@@ -340,4 +340,60 @@ header ul li {
     border-radius: 30px;
     cursor: pointer;
 }
+/* FREE MEMBERSHIP SECTION */
+.membership-section {
+    background-color: #071629;
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+
+.membership-title {
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+.membership-title span {
+    color: #C271FF;
+}
+
+.membership-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.membership-card {
+    width: 220px;
+    text-align: center;
+}
+
+.member-icon {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.membership-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.membership-card p {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.register-btn {
+    padding: 12px 40px;
+    border: none;
+    background: linear-gradient(90deg, #C271FF, #8A2BE2);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+}
 
