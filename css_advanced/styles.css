@@ -446,4 +446,58 @@ header ul li {
         font-size: 36px;
     }
 }
+/* FOOTER SECTION */
+.footer {
+    background-color: #071629; /* deep navy from Figma */
+    padding: 60px 0 40px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    height: 35px;
+}
+
+.footer-logo span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer-socials a img {
+    height: 25px;
+    width: 25px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-socials a img:hover {
+    opacity: 0.7;
+}
+
+.footer-copy {
+    font-size: 14px;
+    color: #8c8c8c; /* light grey text from Figma */
+}
+
+/* RESPONSIVE FOOTER */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
 
