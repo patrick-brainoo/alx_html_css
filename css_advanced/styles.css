@@ -396,4 +396,54 @@ header ul li {
     border-radius: 30px;
     cursor: pointer;
 }
+/* FAQ SECTION */
+.faq-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+    width: 100%;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 80px;
+}
+
+/* Grid: 2 columns, 2 rows */
+.faq-grid {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 100px; /* row-gap, column-gap */
+}
+
+/* Individual FAQ block */
+.faq-item h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.faq-item p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #636363; /* light grey text from Figma */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        width: 90%;
+    }
+
+    .faq-title {
+        font-size: 36px;
+    }
+}
 
