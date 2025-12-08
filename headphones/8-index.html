@@ -1,117 +1,160 @@
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="/" class="logo">
-      <img src="images/logo.svg" alt="Headphones Logo">
-    </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headphones</title>
 
-    <!-- Hamburger Icon -->
-    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <!-- ICON FONT -->
+    <link rel="stylesheet" href="holberton_school-icon/style.css">
 
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#what-we-do">What we do</a></li>
-        <li><a href="#results">Our results</a></li>
-        <li><a href="#contact">Contact us</a></li>
-      </ul>
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="8-styles.css">
+</head>
+
+<body>
+
+<!---------------------------
+     HERO / HEADER
+---------------------------->
+<header class="hero">
+
+    <nav class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/pentagone.png" alt="Pentagon Logo">
+            <img src="images/logo_headphones.png" alt="Headphones Logo">
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="nav-links">
+            <li><a href="#">what we do</a></li>
+            <li><a href="#">our results</a></li>
+            <li><a href="#">contact us</a></li>
+        </ul>
+
+        <!-- Hamburger -->
+        <div id="hamburger" class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
     </nav>
-  </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="#">what we do</a>
+        <a href="#">our results</a>
+        <a href="#">contact us</a>
+    </div>
+
+    <!-- HERO CONTENT -->
+    <div class="hero-content">
+        <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
+        <p>Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+
+        <a href="#" class="cta-button">CALL TO ACTION</a>
+
+        <p class="hero-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </div>
 </header>
 
-<section id="what-we-do" class="what-we-do">
-  <div class="container">
-    <h2>What we do</h2>
-    <ul class="features-grid">
-      <li>
-        <i class="icon icon-1"></i>
-        <h3>Design</h3>
-        <p>We create beautiful and functional user interfaces.</p>
-      </li>
-      <li>
-        <i class="icon icon-2"></i>
-        <h3>Development</h3>
-        <p>We build high-quality, responsive web applications.</p>
-      </li>
-      <li>
-        <i class="icon icon-3"></i>
-        <h3>Testing</h3>
-        <p>We test thoroughly to ensure seamless user experience.</p>
-      </li>
-      <li>
-        <i class="icon icon-4"></i>
-        <h3>Support</h3>
-        <p>We provide ongoing support and maintenance.</p>
-      </li>
-    </ul>
-  </div>
-</section>
-<section id="results" class="our-results">
-  <div class="container">
-    <h2>Our Results</h2>
-    <div class="results-grid">
-      <div class="result-card">
-        <div class="pentagon">
-          <span>+2%</span>
+
+<!---------------------------
+      WHAT WE DO
+---------------------------->
+<section class="what-we-do">
+    <h2>What we do...</h2>
+
+    <p class="section-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua.
+    </p>
+
+    <div class="services">
+
+        <div class="service-item animated-item">
+            <span class="holberton_school-icon-ic_sound"></span>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
         </div>
-        <p>Growth in customer satisfaction</p>
-      </div>
-      <div class="result-card">
-        <div class="pentagon">
-          <span>+15%</span>
+
+        <div class="service-item animated-item">
+            <span class="holberton_school-icon-ic_video"></span>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
         </div>
-        <p>Increase in sales</p>
-      </div>
-      <div class="result-card">
-        <div class="pentagon">
-          <span>+10%</span>
+
+        <div class="service-item animated-item">
+            <span class="holberton_school-icon-ic_music"></span>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
         </div>
-        <p>Website traffic growth</p>
-      </div>
-      <div class="result-card">
-        <div class="pentagon">
-          <span>+5%</span>
+
+        <div class="service-item animated-item">
+            <span class="holberton_school-icon-ic_hearing"></span>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
         </div>
-        <p>Market share expansion</p>
-      </div>
+
     </div>
-  </div>
 </section>
 
-<section id="contact" class="contact-us">
-  <div class="container">
-    <h2>Contact Us</h2>
-    <form class="contact-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+<!---------------------------
+       OUR RESULTS
+---------------------------->
+<section class="results">
+    <h2>Our results speak for themselves</h2>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+    <p class="results-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua.
+    </p>
 
-      <button type="submit" class="btn primary">Send Message</button>
+    <div class="results-boxes">
+        <div class="pentagon animated-item"><span>+2%</span><p>Lorem ipsum</p></div>
+        <div class="pentagon animated-item"><span>+2%</span><p>Lorem ipsum</p></div>
+        <div class="pentagon animated-item"><span>+2%</span><p>Lorem ipsum</p></div>
+        <div class="pentagon animated-item"><span>+2%</span><p>Lorem ipsum</p></div>
+    </div>
+</section>
+
+
+<!---------------------------
+       CONTACT FORM
+---------------------------->
+<section class="contact">
+    <h2>Contact us</h2>
+
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Your message"></textarea>
+        <button type="submit" class="cta-button">CALL TO ACTION</button>
     </form>
-  </div>
 </section>
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <a href="/" class="logo"><img src="images/logo.svg" alt="Headphones Logo"></a>
-    <nav class="footer-nav" aria-label="Footer navigation">
-      <ul>
-        <li><a href="#privacy">Privacy Policy</a></li>
-        <li><a href="#terms">Terms of Service</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="social-icons">
-      <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
-      <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
-      <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+
+
+<!---------------------------
+          FOOTER
+---------------------------->
+<footer class="footer">
+    <div class="footer-content">
+        <img src="images/pentagone.png" alt="">
+        <img src="images/logo_headphones.png" alt="">
     </div>
-    <p>&copy; 2025 Headphones. All rights reserved.</p>
-  </div>
+    <p>© 2025 Headphones</p>
 </footer>
+
+
+<script src="8-script.js"></script>
+
+</body>
+</html>

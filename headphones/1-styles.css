@@ -1,44 +1,184 @@
-/* Reset and base (copy from previous task) */
-* { box-sizing: border-box; margin:0; padding:0; }
-body { font-family: Arial, sans-serif; line-height:1.5; background:#fff; color:#111; }
-
-/* Variables */
-:root{
-  --primary-color: #0d6efd;
-  --hover-color: #FF6565;
-  --max-width: 1000px;
+/* --------------------------------
+   GLOBAL
+-------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Container */
-.container { max-width: var(--max-width); margin:0 auto; padding:0 1rem; }
-
-/* Header (copy from previous task) */
-.site-header { display:flex; justify-content:space-between; align-items:center; padding:1rem 0; }
-.site-header .logo img { height:40px; }
-.main-nav ul { display:flex; list-style:none; gap:1rem; }
-.main-nav a { text-decoration:none; color:#111; padding:.5rem; }
-.main-nav a:hover, .main-nav a:focus { color: var(--hover-color); outline:none; }
-
-/* Hero */
-.hero { position:relative; text-align:center; margin-top:1rem; }
-.hero picture img { width:100%; display:block; }
-.hero-text { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:#fff; max-width:80%; }
-.hero-text h1 { font-size:2rem; margin-bottom:.5rem; }
-.hero-text p { margin-bottom:1rem; }
-.btn.primary { background: var(--primary-color); color:#fff; padding:.75rem 1.5rem; text-decoration:none; border-radius:5px; display:inline-block; }
-.btn.primary:hover, .btn.primary:active { opacity:0.9; }
-
-/* What we do section */
-.what-we-do { padding:3rem 0; text-align:center; }
-.what-we-do h2 { font-size:2rem; margin-bottom:2rem; }
-.features-grid { display:grid; grid-template-columns:1fr; gap:2rem; list-style:none; padding:0; margin:0 auto; }
-.features-grid li { text-align:center; padding:1rem; }
-.features-grid i { font-size:2.5rem; display:block; margin-bottom:1rem; }
-
-/* Responsive */
-@media(min-width:480px){
-  .features-grid { grid-template-columns:repeat(2,1fr); }
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
 }
-@media(min-width:1024px){
-  .features-grid { grid-template-columns:repeat(4,1fr); }
+
+/* --------------------------------
+   HERO SECTION
+-------------------------------- */
+.hero {
+    background-image: url("images/headphones_hero_1.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+/* --------------------------------
+   NAVIGATION
+-------------------------------- */
+.navbar {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #FF6565;
+}
+
+/* MOBILE MENU */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.85);
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+}
+
+.mobile-menu a {
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Toggle open */
+#menu-toggle:checked ~ .mobile-menu {
+    display: flex;
+}
+
+/* --------------------------------
+   HERO CONTENT
+-------------------------------- */
+.hero-content {
+    text-align: center;
+    margin-top: 150px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background: #FF6565;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+/* --------------------------------
+   WHAT WE DO SECTION
+-------------------------------- */
+.what-we-do {
+    background: white;
+    color: #333;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.what-we-do h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+/* Icon grid */
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    max-width: 200px;
+    text-align: center;
+}
+
+/* Icons */
+.service-item span {
+    font-size: 50px;
+    color: #FF6565;
+}
+
+.service-item h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* --------------------------------
+   RESPONSIVE
+-------------------------------- */
+@media (max-width: 480px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .hero-content {
+        margin-top: 100px;
+        padding: 0 20px;
+    }
+
+    /* Stack icons vertically */
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
 }

@@ -1,112 +1,351 @@
-/* Reset and base (copy from previous task) */
-* { box-sizing: border-box; margin:0; padding:0; }
-body { font-family: Arial, sans-serif; line-height:1.5; background:#fff; color:#111; }
-
-/* Variables */
-:root{
-  --primary-color: #0d6efd;
-  --hover-color: #FF6565;
-  --max-width: 1000px;
+/* --------------------------------
+   GLOBAL RESET
+-------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Container */
-.container { max-width: var(--max-width); margin:0 auto; padding:0 1rem; }
-
-/* Header (copy from previous task) */
-.site-header { display:flex; justify-content:space-between; align-items:center; padding:1rem 0; }
-.site-header .logo img { height:40px; }
-.main-nav ul { display:flex; list-style:none; gap:1rem; }
-.main-nav a { text-decoration:none; color:#111; padding:.5rem; }
-.main-nav a:hover, .main-nav a:focus { color: var(--hover-color); outline:none; }
-
-/* Hero */
-.hero { position:relative; text-align:center; margin-top:1rem; }
-.hero picture img { width:100%; display:block; }
-.hero-text { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:#fff; max-width:80%; }
-.hero-text h1 { font-size:2rem; margin-bottom:.5rem; }
-.hero-text p { margin-bottom:1rem; }
-.btn.primary { background: var(--primary-color); color:#fff; padding:.75rem 1.5rem; text-decoration:none; border-radius:5px; display:inline-block; }
-.btn.primary:hover, .btn.primary:active { opacity:0.9; }
-
-/* What we do section */
-.what-we-do { padding:3rem 0; text-align:center; }
-.what-we-do h2 { font-size:2rem; margin-bottom:2rem; }
-.features-grid { display:grid; grid-template-columns:1fr; gap:2rem; list-style:none; padding:0; margin:0 auto; }
-.features-grid li { text-align:center; padding:1rem; }
-.features-grid i { font-size:2.5rem; display:block; margin-bottom:1rem; }
-
-/* Responsive */
-@media(min-width:480px){
-  .features-grid { grid-template-columns:repeat(2,1fr); }
-}
-@media(min-width:1024px){
-  .features-grid { grid-template-columns:repeat(4,1fr); }
-}
-/* Our Results Section */
-.our-results { padding:3rem 0; text-align:center; background:#f7f7f7; }
-.our-results h2 { font-size:2rem; margin-bottom:2rem; }
-.results-grid { display:grid; grid-template-columns:1fr; gap:1.5rem; margin:0 auto; }
-
-.result-card { background:#fff; padding:1.5rem; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.05); }
-.result-card h3 { font-size:2rem; margin-bottom:.5rem; color:#0d6efd; }
-.result-card p { font-size:1rem; color:#555; }
-
-/* Responsive */
-@media(min-width:480px){
-  .results-grid { grid-template-columns:repeat(2,1fr); }
-}
-@media(min-width:1024px){
-  .results-grid { grid-template-columns:repeat(4,1fr); }
-}
-/* Contact Us Section */
-.contact-us { padding:3rem 0; text-align:center; background:#f7f7f7; }
-.contact-us h2 { font-size:2rem; margin-bottom:2rem; }
-
-.contact-form { display:flex; flex-direction:column; gap:1rem; max-width:600px; margin:0 auto; }
-.contact-form label { font-weight:600; text-align:left; }
-.contact-form input, 
-.contact-form textarea { padding:.75rem; border:1px solid #ccc; border-radius:5px; font-size:1rem; width:100%; }
-.contact-form input:focus, .contact-form textarea:focus { outline:2px solid #0d6efd; }
-
-.contact-form button { background:#0d6efd; color:#fff; padding:.75rem 1.5rem; border:none; border-radius:5px; cursor:pointer; font-size:1rem; }
-.contact-form button:hover, .contact-form button:active { opacity:0.9; }
-/* Footer */
-.site-footer { background:#111; color:#fff; padding:2rem 1rem; text-align:center; }
-.footer-inner { max-width:1000px; margin:0 auto; display:flex; flex-direction:column; gap:1rem; align-items:center; }
-.footer-inner .logo img { height:40px; margin-bottom:1rem; }
-.footer-nav ul { list-style:none; display:flex; gap:1rem; padding:0; margin:0; }
-.footer-nav a { color:#fff; text-decoration:none; }
-.footer-nav a:hover, .footer-nav a:focus { color:#FF6565; outline:none; }
-
-.social-icons { display:flex; gap:1rem; margin:1rem 0; }
-.social-icons img { height:24px; width:24px; }
-
-.footer-inner p { font-size:.9rem; color:#aaa; margin-top:0; }
-
-/* Responsive */
-@media(min-width:640px){
-  .footer-inner { flex-direction:row; justify-content:space-between; align-items:center; text-align:left; }
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    background-color: #000;
 }
 
-/* Pentagon CSS */
+/* --------------------------------
+   HERO SECTION
+-------------------------------- */
+.hero {
+    background-image: url("images/headphones_hero_1.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+/* --------------------------------
+   NAVBAR
+-------------------------------- */
+.navbar {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #FF6565;
+}
+
+/* --------------------------------
+   MOBILE MENU
+-------------------------------- */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 22px;
+}
+
+.menu-icon img {
+    width: 30px;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    top: 70px;
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 0;
+    font-size: 18px;
+}
+
+#menu-toggle:checked ~ .mobile-menu {
+    display: flex;
+}
+
+/* --------------------------------
+   HERO CONTENT
+-------------------------------- */
+.hero-content {
+    text-align: center;
+    margin-top: 150px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 16px;
+}
+
+.cta-button {
+    margin-top: 25px;
+    display: inline-block;
+    background-color: #FF6565;
+    padding: 12px 30px;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+}
+
+.hero-description {
+    margin-top: 20px;
+    font-size: 15px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* --------------------------------
+   WHAT WE DO
+-------------------------------- */
+.what-we-do {
+    background-color: white;
+    color: #333;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.what-we-do h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.service-item {
+    max-width: 200px;
+}
+
+.service-item span {
+    font-size: 55px;
+    color: #FF6565;
+}
+
+.service-item h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* --------------------------------
+   OUR RESULTS (CSS PENTAGONS)
+-------------------------------- */
+.results-section {
+    background-image: url("images/headphones_hero_2.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.results-section .section-title {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.section-lead {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* grid of results */
+.results-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+
+/* CSS-drawn pentagon */
 .pentagon {
-  position: relative;
-  width: 100px;
-  background: #0d6efd;
-  margin: 0 auto 1rem auto;
-  clip-path: polygon(50% 0%, 95% 35%, 78% 90%, 22% 90%, 5% 35%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.2rem;
+    width: 130px;
+    height: 130px;
+    background: #FF6565;
+    clip-path: polygon(
+        50% 0%, 
+        100% 38%, 
+        82% 100%, 
+        18% 100%, 
+        0% 38%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.pentagon span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.pentagon-value {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.result-label {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* --------------------------------
+   CONTACT FORM
+-------------------------------- */
+.contact-section {
+    background-color: white;
+    color: #333;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    font-size: 16px;
+}
+
+.contact-form button {
+    margin-top: 20px;
+}
+
+/* --------------------------------
+   FOOTER
+-------------------------------- */
+.footer {
+    background-color: #000;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .logo img {
+    height: 40px;
+    margin-right: 5px;
+}
+
+.social span {
+    font-size: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.social span:hover {
+    color: #FF6565;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* --------------------------------
+   MOBILE DESIGN
+-------------------------------- */
+@media (max-width: 480px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .hero-content {
+        margin-top: 100px;
+        padding: 0 20px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .results-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
 }

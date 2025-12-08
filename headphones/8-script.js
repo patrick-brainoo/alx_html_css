@@ -1,13 +1,7 @@
-// Wait for DOM to load
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('.main-nav');
+// Hamburger Toggle
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobile-menu");
 
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-
-    // Toggle aria-expanded for accessibility
-    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-    hamburger.setAttribute('aria-expanded', !expanded);
-  });
+hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
 });

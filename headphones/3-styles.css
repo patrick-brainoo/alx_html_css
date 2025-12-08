@@ -12,6 +12,7 @@ body {
     color: white;
 }
 
+
 /* --------------------------------
    HERO SECTION
 -------------------------------- */
@@ -41,9 +42,9 @@ body {
 }
 
 .nav-links {
+    list-style: none;
     display: flex;
     gap: 25px;
-    list-style: none;
 }
 
 .nav-links a {
@@ -56,69 +57,70 @@ body {
     color: #FF6565;
 }
 
-/* --------------------------------
-   HAMBURGER
--------------------------------- */
-.hamburger {
+
+/* MOBILE MENU */
+#menu-toggle {
     display: none;
-    flex-direction: column;
-    gap: 6px;
+}
+
+.menu-icon {
+    display: none;
     cursor: pointer;
 }
 
-.hamburger .line {
-    width: 28px;
-    height: 3px;
-    background: white;
-    border-radius: 5px;
+.menu-icon img {
+    width: 30px;
 }
 
-/* MOBILE MENU */
 .mobile-menu {
     display: none;
     flex-direction: column;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.85);
     text-align: center;
-    width: 100%;
     position: absolute;
-    top: 80px;
-    left: 0;
-    padding: 20px 0;
+    width: 100%;
+    top: 70px;
 }
 
 .mobile-menu a {
-    color: white;
     padding: 15px 0;
     font-size: 18px;
+    color: #fff;
     text-decoration: none;
 }
 
-.mobile-menu.open {
+#menu-toggle:checked ~ .mobile-menu {
     display: flex;
 }
+
 
 /* --------------------------------
    HERO CONTENT
 -------------------------------- */
 .hero-content {
     text-align: center;
+    margin-top: 150px;
     max-width: 700px;
-    margin: 150px auto 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cta-button {
     background: #FF6565;
     padding: 12px 30px;
     border-radius: 30px;
-    text-decoration: none;
     color: white;
+    text-decoration: none;
     display: inline-block;
     margin: 20px 0;
 }
 
-.cta-button:hover {
-    opacity: 0.9;
+.hero-description {
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
 }
+
 
 /* --------------------------------
    WHAT WE DO SECTION
@@ -126,8 +128,20 @@ body {
 .what-we-do {
     background: white;
     color: #333;
-    padding: 80px 20px;
     text-align: center;
+    padding: 70px 20px;
+}
+
+.what-we-do h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 50px;
+    line-height: 1.6;
 }
 
 .services {
@@ -143,11 +157,15 @@ body {
 }
 
 .service-item span {
-    font-size: 48px;
+    font-size: 50px;
     color: #FF6565;
-    margin-bottom: 15px;
-    display: inline-block;
 }
+
+.service-item h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
 
 /* --------------------------------
    RESULTS SECTION
@@ -158,13 +176,26 @@ body {
     background-position: center;
     padding: 80px 20px;
     text-align: center;
+    color: white;
+}
+
+.results h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.results-description {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 .results-boxes {
     display: flex;
     justify-content: center;
-    gap: 40px;
     flex-wrap: wrap;
+    gap: 40px;
 }
 
 .pentagon {
@@ -177,24 +208,36 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
+    padding: 10px;
 }
 
 .pentagon span {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
 }
 
+.pentagon p {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+
 /* --------------------------------
-   CONTACT SECTION
+   CONTACT SECTION (TASK 3)
 -------------------------------- */
 .contact {
     background: white;
     color: #333;
-    padding: 80px 20px;
     text-align: center;
+    padding: 70px 20px;
 }
 
-.contact form {
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
     max-width: 400px;
     margin: auto;
     display: flex;
@@ -202,38 +245,17 @@ body {
     gap: 15px;
 }
 
-.contact input,
-.contact textarea {
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
     border: 1px solid #ccc;
-    padding: 10px;
+    border-radius: 5px;
 }
 
-/* --------------------------------
-   FOOTER
--------------------------------- */
-.footer {
-    background: #0d1b2a;
-    text-align: center;
-    padding: 40px 20px;
+.contact-form textarea {
+    height: 120px;
 }
 
-.footer img {
-    height: 35px;
-    margin: 0 10px;
-    vertical-align: middle;
-}
-
-/* --------------------------------
-   ANIMATIONS
--------------------------------- */
-.animated-item {
-    animation: bounce 1.5s infinite ease-in-out;
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
-}
 
 /* --------------------------------
    RESPONSIVE
@@ -244,13 +266,25 @@ body {
         display: none;
     }
 
-    .hamburger {
-        display: flex;
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
     }
 
-    .services,
-    .results-boxes {
+    .hero-content {
+        margin-top: 100px;
+        padding: 0 20px;
+    }
+
+    .services {
         flex-direction: column;
         align-items: center;
+    }
+
+    .results-boxes {
+        flex-direction: column;
+        gap: 25px;
     }
 }
