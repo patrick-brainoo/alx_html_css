@@ -1,0 +1,44 @@
+/* Reset and base (copy from previous task) */
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: Arial, sans-serif; line-height:1.5; background:#fff; color:#111; }
+
+/* Variables */
+:root{
+  --primary-color: #0d6efd;
+  --hover-color: #FF6565;
+  --max-width: 1000px;
+}
+
+/* Container */
+.container { max-width: var(--max-width); margin:0 auto; padding:0 1rem; }
+
+/* Header (copy from previous task) */
+.site-header { display:flex; justify-content:space-between; align-items:center; padding:1rem 0; }
+.site-header .logo img { height:40px; }
+.main-nav ul { display:flex; list-style:none; gap:1rem; }
+.main-nav a { text-decoration:none; color:#111; padding:.5rem; }
+.main-nav a:hover, .main-nav a:focus { color: var(--hover-color); outline:none; }
+
+/* Hero */
+.hero { position:relative; text-align:center; margin-top:1rem; }
+.hero picture img { width:100%; display:block; }
+.hero-text { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:#fff; max-width:80%; }
+.hero-text h1 { font-size:2rem; margin-bottom:.5rem; }
+.hero-text p { margin-bottom:1rem; }
+.btn.primary { background: var(--primary-color); color:#fff; padding:.75rem 1.5rem; text-decoration:none; border-radius:5px; display:inline-block; }
+.btn.primary:hover, .btn.primary:active { opacity:0.9; }
+
+/* What we do section */
+.what-we-do { padding:3rem 0; text-align:center; }
+.what-we-do h2 { font-size:2rem; margin-bottom:2rem; }
+.features-grid { display:grid; grid-template-columns:1fr; gap:2rem; list-style:none; padding:0; margin:0 auto; }
+.features-grid li { text-align:center; padding:1rem; }
+.features-grid i { font-size:2.5rem; display:block; margin-bottom:1rem; }
+
+/* Responsive */
+@media(min-width:480px){
+  .features-grid { grid-template-columns:repeat(2,1fr); }
+}
+@media(min-width:1024px){
+  .features-grid { grid-template-columns:repeat(4,1fr); }
+}
